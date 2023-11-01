@@ -11,8 +11,17 @@ class Player(Turtle):
         self.penup()
         self.shape("turtle")
         self.color("green")
-        self.left(90)
-        self.goto(STARTING_POSITION)
+        self.setheading(90)
+        self.go_to_start()
 
     def move_forward(self):
         self.forward(MOVE_DISTANCE)
+
+    def crossed_road(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
+
+    def go_to_start(self):
+        self.goto(STARTING_POSITION)

@@ -28,4 +28,9 @@ while game_is_on:
         if car.distance(turtle) < 20:
             game_is_on = False
 
+    # Detect successful road crossing
+    if turtle.crossed_road():
+        turtle.go_to_start()
+
+
 screen.exitonclick()
