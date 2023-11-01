@@ -17,6 +17,10 @@ class Player(Turtle):
     def move_forward(self):
         self.forward(MOVE_DISTANCE)
 
+    def move_backwards(self):
+        if self.ycor() >= STARTING_POSITION[1]:
+            self.backward(MOVE_DISTANCE)
+
     def crossed_road(self):
         if self.ycor() > FINISH_LINE_Y:
             return True
