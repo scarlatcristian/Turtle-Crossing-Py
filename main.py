@@ -31,6 +31,7 @@ while game_is_on:
     # Detect successful road crossing
     if turtle.crossed_road():
         turtle.go_to_start()
+        car_manager.increase_speed()
 
 
 screen.exitonclick()
